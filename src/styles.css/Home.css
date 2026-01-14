@@ -1,0 +1,9 @@
+
+.calendar-day {
+  transition: transform 0.15s ease, background-color 0.2s;
+}
+.calendar-day:hover {
+  transform: scale(1.03);
+  background-color: #f0f8ff !important;
+}
+

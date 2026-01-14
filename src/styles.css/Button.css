@@ -1,0 +1,108 @@
+
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+  gap: 1.5rem; /* space between each row */
+}
+
+/* Button group wrappers */
+.upwards,
+.downwards,
+.sideways {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Base button look */
+.btn-control {
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(145deg, #1100fd, #7ba5ff);
+  box-shadow:
+    4px 4px 10px rgba(0, 0, 0, 0.3),
+    inset 1px 1px 3px rgba(255, 255, 255, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover & pressed states */
+.btn-control:hover {
+  background: linear-gradient(145deg, #0d00d1, #5e90ff);
+  transform: scale(1.07);
+  box-shadow:
+    6px 6px 12px rgba(0, 0, 0, 0.4),
+    inset 0 0 5px rgba(255, 255, 255, 0.25);
+}
+
+.btn-control:active {
+  transform: scale(0.95);
+  box-shadow:
+    inset 4px 4px 6px rgba(0, 0, 0, 0.3),
+    inset -2px -2px 6px rgba(255, 255, 255, 0.2);
+}
+
+/* Direction-specific highlights */
+.up,
+.down {
+  background: linear-gradient(145deg, #1100fd, #7ba5ff);
+}
+
+.left,
+.right {
+  background: linear-gradient(145deg, #1100fd, #7ba5ff);
+}
+
+/* Horizontal spacing between LEFT & RIGHT */
+.sideways .btn-control {
+  margin: 0 25px;
+}
+
+/* 🌀 Responsive D-pad layout */
+@media (max-width: 600px) {
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 70px);
+    grid-template-rows: repeat(3, 70px);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  /* Center the D-pad layout */
+  .upwards {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .sideways {
+    grid-column: 1 / span 3;
+    grid-row: 2;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .downwards {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .btn-control {
+    width: 70px;
+    height: 70px;
+    font-size: 1.2rem;
+  }
+
+  .sideways .btn-control {
+    margin: 0;
+  }
+}

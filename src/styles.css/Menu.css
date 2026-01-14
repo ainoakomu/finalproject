@@ -1,0 +1,50 @@
+
+
+.wrapper {
+  position: relative;
+  width: 220px;
+  height: 260px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  margin: 100px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.3),
+    inset 0 1px 3px rgba(255, 255, 255, 0.2);
+}
+
+.start {
+  background: linear-gradient(145deg, #5bc0de, #31b0d5);
+  color: #fff;
+  border-radius: 0.75rem;
+  border: 0;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow:
+    3px 3px 8px rgba(0, 0, 0, 0.3),
+    inset 1px 1px 3px rgba(255, 255, 255, 0.2);
+  font-family: "Nunito", "Helvetica Neue", sans-serif;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.start:hover {
+  background: linear-gradient(145deg, #31b0d5, #5bc0de);
+  transform: scale(1.05);
+  box-shadow:
+    5px 5px 12px rgba(0, 0, 0, 0.4),
+    inset 0 0 4px rgba(255, 255, 255, 0.3);
+}
+
+.start:active {
+  transform: scale(0.97);
+  box-shadow:
+    inset 3px 3px 8px rgba(0, 0, 0, 0.3),
+    inset -2px -2px 6px rgba(255, 255, 255, 0.2);
+}

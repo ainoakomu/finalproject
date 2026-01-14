@@ -1,0 +1,121 @@
+
+
+/* The main game area */
+.game-area {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 40px auto;
+  background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+  border-radius: 1rem;
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.3),
+    inset 0 1px 3px rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+
+/* SNAKE */
+.snake-dot {
+  position: absolute;
+  width: 2%;
+  height: 2%;
+  background: linear-gradient(145deg, #a38ffc, #0400ff);
+  border-radius: 4px;
+  box-shadow:
+    inset 1px 1px 3px rgba(255, 255, 255, 0.2),
+    2px 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+/* FOOD */
+.food-dot {
+  position: absolute;
+  width: 2%;
+  height: 2%;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #f0ad4e, #221fec);
+  box-shadow: 0 0 10px rgba(240, 173, 78, 0.6);
+  z-index: 1;
+}
+
+
+/* Modal overlay */
+.modal.fade.show.d-block {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(3px);
+}
+
+/* Modal dialog */
+.modal-dialog {
+  max-width: 350px;
+  margin: auto;
+}
+
+/* Modal content */
+.modal-content {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  color: #212529;
+  border-radius: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.25),
+    inset 0 1px 3px rgba(255, 255, 255, 0.3);
+  animation: popIn 0.25s ease-out;
+}
+
+/* Modal header */
+.modal-header {
+  border-bottom: none;
+  border-radius: 1rem 1rem 0 0;
+  background: linear-gradient(145deg, #5bc0de, #31b0d5);
+  color: #fff;
+  padding: 1rem 1.5rem;
+}
+
+/* Modal title */
+.modal-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+/* Modal footer */
+.modal-footer {
+  border-top: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+}
+
+/* Restart button */
+.btn-restart {
+  background: linear-gradient(145deg, #d9534f, #e79997);
+  color: #fff;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-restart:hover {
+  background: linear-gradient(145deg, #c9302c, #d9534f);
+  transform: scale(1.05);
+  box-shadow:
+    3px 3px 8px rgba(0, 0, 0, 0.3),
+    inset 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+/* Simple pop animation */
+@keyframes popIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
